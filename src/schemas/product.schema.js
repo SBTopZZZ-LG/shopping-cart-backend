@@ -8,6 +8,11 @@ const schema = new mongoose.Schema({
 		required: true,
 		trim: true,
 	},
+	category: {
+		type: String,
+		default: "Misc",
+		trim: true,
+	},
 	price: {
 		type: Number,
 		required: true,
