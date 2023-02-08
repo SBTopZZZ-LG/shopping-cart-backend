@@ -8,4 +8,4 @@ require("./src/scripts/mongodb.script");
 const expressApp = require("./src/utils/express.util");
 
 // Consume routes
-expressApp.use(require("./src/routes/product.route"));
+expressApp.use("/products", require("./src/routes/product.route"));
