@@ -1,0 +1,18 @@
+# Node
+node_modules
+package-lock.json
+
+# Env vars
+*.env
+.env
+
+# Sensitive config files
+src/configs/*.secure.js
+src/configs/*.secure.json
+
+# Mongodb playground
+*.mongodb
+
+# Misc
+.DS_Store
+
