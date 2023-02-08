@@ -5,7 +5,13 @@ const Response = require("../models/standard.response.model");
 // Body
 async function productGetAllController(req, res, next) {
 	try {
-		const products = await Product.find();
+		const { query } = req;
+
+		const products = await Product.find({
+			...("category" in query ? {
+				category: query.category,
+			} : {}),
+		});
 
 		if (!res.body) res.body = {};
 		res.body.products_count = products.length;
